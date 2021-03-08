@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html lang="en" style="background: #121212;">
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+            <title>SpinShare Twitch Bot</title>
+        </head>
+        <body style="opacity: 0;">
+            <div class="wrapper">
+                <div class="current-item" style="display: none;">
+                    <div class="summary">
+                        <div class="cover"></div>
+                        <div class="text">
+                            <div class="title">Lorem Ipsum dolor sit amet</div>
+                            <div class="author">Meganeko • Charted by Stride and Juch.</div>
+                            <div class="difficulties">
+                                <div class="diffEasy"><span>E</span>0</div>
+                                <div class="diffNormal"><span>N</span>0</div>
+                                <div class="diffHard"><span>H</span>0</div>
+                                <div class="diffExpert"><span>EX</span>0</div>
+                                <div class="diffXD"><span>XD</span>0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="requestedby">Requested by <span></span></div>
+                    <div class="actions">
+                        <div class="button" onclick="openCurrentQueueItemOnSpinShare()">Open on SpinShare</div>
+                        <div class="button" onclick="openCurrentQueueItemInClient()">Open in Client</div>
+                        <div class="button" onclick="removeCurrentQueueItem()">Remove</div>
+                    </div>
+                </div>
+
+                <header>Queue</header>
+
+                <div class="queue-list">
+                </div>
+
+                <div class="queue-empty active">
+                    <div class="title">Your queue is empty.</div>
+                    <div class="explaination">Viewers can add charts from SpinShare by using the "!add" command in your chat.</div>
+                </div>
+            </div>
+
+            <div id="queue-item-template" class="template">
+                <div class="queue-item" tabindex="-1">
+                    <div class="summary">
+                        <div class="cover"></div>
+                        <div class="text">
+                            <div class="title"></div>
+                            <div class="author"></div>
+                            <div class="difficulties">
+                                <div class="diffEasy"><span>E</span>0</div>
+                                <div class="diffNormal"><span>N</span>0</div>
+                                <div class="diffHard"><span>H</span>0</div>
+                                <div class="diffExpert"><span>EX</span>0</div>
+                                <div class="diffXD"><span>XD</span>0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="requestedby">Requested by <span></span></div>
+                    <div class="actions">
+                        <div class="button buttonPlay">Play</div>
+                        <div class="button buttonRemove">Remove</div>
+                    </div>
+                </div>
+            </template>
+
+            <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;700&display=swap" rel="stylesheet" />
+            <link rel="stylesheet" href="./css/reset.css" />
+            <link rel="stylesheet" href="./css/style.css" />
+
+            <script src="./js/page.js"></script>
+        </body>
+    </html>

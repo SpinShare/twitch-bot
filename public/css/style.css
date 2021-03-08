@@ -1,0 +1,213 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Farro', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  transition: 0.2s ease opacity;
+}
+body .wrapper {
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+body .wrapper .current-item {
+  transition: 0.2s ease all;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  display: grid;
+  margin-top: 30px;
+  grid-template-rows: auto auto auto;
+}
+body .wrapper .current-item .summary {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-gap: 15px;
+}
+body .wrapper .current-item .summary .cover {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
+}
+body .wrapper .current-item .summary .text .title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+body .wrapper .current-item .summary .text .author {
+  color: rgba(255, 255, 255, 0.4);
+}
+body .wrapper .current-item .summary .text .difficulties {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 5px;
+}
+body .wrapper .current-item .summary .text .difficulties > div {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 10px;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 12px;
+}
+body .wrapper .current-item .summary .text .difficulties > div span {
+  margin-right: 3px;
+  font-weight: bold;
+}
+body .wrapper .current-item .requestedby {
+  display: block;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.4);
+}
+body .wrapper .current-item .requestedby span {
+  font-weight: bold;
+  color: #ffffff;
+}
+body .wrapper .current-item .actions {
+  display: grid;
+  margin-top: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+body .wrapper .current-item .actions .button {
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  line-height: 1.5;
+  transition: 0.2s ease all;
+}
+body .wrapper .current-item .actions .button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+body .wrapper header {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+body .wrapper .queue-list {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+}
+body .wrapper .queue-list .queue-item {
+  transition: 0.2s ease all;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  display: grid;
+  border-radius: 4px;
+  grid-template-rows: auto auto auto;
+}
+body .wrapper .queue-list .queue-item .summary {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-gap: 15px;
+}
+body .wrapper .queue-list .queue-item .summary .cover {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
+}
+body .wrapper .queue-list .queue-item .summary .text .title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+body .wrapper .queue-list .queue-item .summary .text .author {
+  color: rgba(255, 255, 255, 0.4);
+}
+body .wrapper .queue-list .queue-item .summary .text .difficulties {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 5px;
+}
+body .wrapper .queue-list .queue-item .summary .text .difficulties > div {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 10px;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 12px;
+}
+body .wrapper .queue-list .queue-item .summary .text .difficulties > div span {
+  margin-right: 3px;
+  font-weight: bold;
+}
+body .wrapper .queue-list .queue-item .requestedby {
+  display: none;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.4);
+}
+body .wrapper .queue-list .queue-item .requestedby span {
+  font-weight: bold;
+  color: #ffffff;
+}
+body .wrapper .queue-list .queue-item .actions {
+  display: none;
+  margin-top: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+body .wrapper .queue-list .queue-item .actions .button {
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  line-height: 1.5;
+  transition: 0.2s ease all;
+}
+body .wrapper .queue-list .queue-item .actions .button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+body .wrapper .queue-list .queue-item:focus .requestedby {
+  display: block;
+}
+body .wrapper .queue-list .queue-item:focus .actions {
+  display: grid;
+}
+body .wrapper .queue-list .queue-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+body .wrapper .queue-empty {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px;
+  border-radius: 4px;
+  display: none;
+  text-align: center;
+}
+body .wrapper .queue-empty .title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+body .wrapper .queue-empty .explaination {
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.4);
+}
+body .wrapper .queue-empty.active {
+  display: block;
+}
+.template {
+  display: none;
+}

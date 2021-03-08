@@ -18,10 +18,15 @@
   "author": "SpinShare",
   "license": "Apache-2.0",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
     "ssapi-node": "^1.0.4",
     "tmi.js": "^1.7.5",
     "twitch-auth": "^4.5.0",
-    "twitch-auth-tmi": "^4.5.0"
+    "twitch-auth-tmi": "^4.5.0",
+    "websocket": "^1.0.33"
   }
 }
